@@ -62,6 +62,24 @@ $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
 ```
+For multiple Carousel, set array of option's as below
+
+```javascript
+$(document).ready(function(){
+  $('.bxslider').bxSlider([{mode: 'vertical',
+			slideMargin: 40,
+			slideWidth: 660,
+			minSlides: 3,
+			maxSlides: 3,
+			speed: 800},{mode: 'horizontal',
+			slideMargin: 40,
+			slideWidth: 660,
+			minSlides: 2,
+			maxSlides: 2,
+			speed: 800}]);
+});
+```
+
 
 ## Configuration options
 
