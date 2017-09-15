@@ -98,11 +98,17 @@
       return this;
     }
 
-    // support multiple elements
+    // support multiple elements and multiple carousel options    
     if (this.length > 1) {
-      this.each(function() {
-        $(this).bxSlider(options);
-      });
+        if( $.isArray(options) ) {
+            this.each(function(i, e) {
+                $(this).bxSlider(options[i]);
+              });
+        } else {
+            this.each(function() {
+                $(this).bxSlider(options);
+              });
+        }
       return this;
     }
 
